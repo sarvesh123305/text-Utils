@@ -16,6 +16,21 @@ export default function TextForm(props) {
         setText(event.target.value);
 
     }
+    const handleClearClick = () =>{
+       
+        setText("");
+
+    }
+    const handleSearchClick = () =>{
+        let newtext = text.search("Hello");
+        if(!newtext)
+        alert("Found");
+        // setText("Found");
+        else
+        alert(" Not Found");
+
+        // setText("Not Found");
+    }
     const[text,setText] = useState("");
     return (
         <>
@@ -26,12 +41,16 @@ export default function TextForm(props) {
   <textarea className="form-control" placeholder='Enter Your text' value={text} onChange={handleOnChange} id="myBox" rows="8"></textarea>
 </div>
 <button className="btn btn-primary mx-1" onClick={handleUpClick}>Convert to Uppercase</button>
-<button className="btn btn-success mx-1" onClick={handleLowClick}>Convert to Uppercase</button>
+<button className="btn btn-success mx-1" onClick={handleLowClick}>Convert to Lowercase</button>
+<button className="btn btn-light mx-1" onClick={handleClearClick}>Clear</button>
+<button className="btn btn-secondary mx-1" onClick={handleSearchClick}>Search</button>
+
+
 
     </div>
     <div className="container my-3">
-        <h1>Your Text Summary : </h1>
-        <p> {text.split(" ").length} Words {text.length}Characters</p>
+        <h2>Your Text Summary : </h2>
+        <p> {text.split(" ").length} Words {text.length} Characters</p>
         <p>  Average minutes Reading Time Required : { 0.008 * text.split(" ").length }</p>
 
         <h3>Preview</h3>
