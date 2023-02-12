@@ -1,34 +1,35 @@
 import './App.css';
+import Navbar from './components/Navbar';
+import PropTypes from 'prop-types'
+import TextForm from './components/TextForm';
 
 function App() {
   return (
      <>
-     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="s">Text Utils</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse " id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="s">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="s">Link</a>
-        </li>
-        
-       
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
+   
+<Navbar title="TextUtils" />
+{/* This is props , now we can have a dynamic title and rendering */}
+<div className="container my-3">
+
+<TextForm Heading = "Enter your text here "/>
+
+</div>
      </>
     );
 }
 
+Navbar.propTypes = {
+  title:PropTypes.string.isRequired,
+  about:PropTypes.string.isRequired,};
+
+Navbar.defaultProps = {
+  title : "Set Title here",
+  about : "About "
+}
+TextForm.propTypes = {
+  Heading : PropTypes.string,
+}
+TextForm.defaultProps = {
+
+}
 export default App;
