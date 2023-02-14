@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import PropTypes from 'prop-types'
 import TextForm from './components/TextForm';
+import About from './components/About';
 
 function App() {
   return (
@@ -11,8 +12,8 @@ function App() {
 {/* This is props , now we can have a dynamic title and rendering */}
 <div className="container my-3">
 
-<TextForm Heading = "Enter your text here "/>
-
+{/* <TextForm Heading = "Enter your text here "/> */}
+<About />
 </div>
      </>
     );
