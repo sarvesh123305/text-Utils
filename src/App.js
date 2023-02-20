@@ -59,6 +59,13 @@ function App() {
       setAlert(null)
     },1000);
   }
+
+  // const[activeState,setactiveState] = useState(1);
+  // const showActiveState = () =>{
+      
+
+  // }
+  
   return (
      <>
   <Router>
@@ -69,7 +76,7 @@ function App() {
  <Routes>
     {/* <Route exact path="/about" component={About}> */}
       <Route exact path="/" element={<TextForm Heading = "Enter your text here " btnText={btnText} showAlert={showAlert}/>} / >
-      <Route exact path="/about" element={<About/>} />
+      <Route exact path="/about" element={<About btnText={btnText}/>} />
 
    </Routes> 
 </div>
