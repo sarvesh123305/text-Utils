@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import {NavLink} from 'react-router-dom'
 export default function Navbar(props) {
   // var isActive = this.context.router.route.location.pathname === this.props.to;

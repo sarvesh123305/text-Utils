@@ -8,11 +8,6 @@ export default function About(props) {
     //     backgroundColor : 'white'
     // });
 
-    let myStyle = {
-      color: props.mode ==='dark'?'white':'#042743',
-      backgroundColor: props.mode ==='dark'?'rgb(36 74 104)':'white', 
-  }
-    
     // const[btnText,setbtnText] = useState('Enable Dark Mode');
 
     // const toggleStyle = () =>{
